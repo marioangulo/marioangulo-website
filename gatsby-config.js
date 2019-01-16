@@ -37,12 +37,6 @@ module.exports = client.getEntries().then(entries => {
           accessToken: ACCESS_TOKEN,
         },
       },
-      {
-        resolve: `gatsby-source-medium`,
-        options: {
-          username: about.mediumUser,
-        },
-      },
       'gatsby-transformer-remark',
       'gatsby-plugin-offline',
     ],
