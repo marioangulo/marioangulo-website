@@ -104,12 +104,12 @@ const ProjectTag = styled.div`
   }
 `;
 
-const getSocialLink = (url, icon) => {
+const getSocialLink = (title, url, icon) => {
   if(url) {
     return(
       <Box mx={1} fontSize={5}>
         <SocialLink
-          name="Check repository"
+          name={title}
           fontAwesomeIcon={icon}
           url={url}
         />
@@ -150,8 +150,8 @@ const Project = ({
               float: 'right',
             }}
           >
-            {getSocialLink(repositoryUrl, "github")}
-            {getSocialLink(projectUrl, "globe")}
+            {getSocialLink("See repository", repositoryUrl, "github")}
+            {getSocialLink("See project", projectUrl, "globe")}
           </Flex>
           <ImageSubtitle bg="primaryLight" color="white" y="bottom" x="right">
             {type}
